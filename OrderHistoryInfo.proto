@@ -1,0 +1,24 @@
+syntax = "proto2";
+
+package protos;
+
+option java_multiple_files = true;
+option java_package = "com.zkart.protos";
+option java_outer_classname = "OrderHistoryInfo";
+
+message OrderHistory
+{
+	required int32  invoiceNumber = 1;
+	optional string date = 2;
+	optional int32  creditsUsed = 3;
+	optional double totalPrice = 4;
+	optional int32  creditsAdded = 5;
+	optional string userName = 6;
+	optional string model = 7; 
+}
+
+
+message OrderHistoryInfo
+{
+	repeated OrderHistory OrderHistoryInfo = 1;
+}

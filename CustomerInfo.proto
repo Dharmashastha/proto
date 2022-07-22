@@ -1,0 +1,23 @@
+syntax = "proto2";
+
+package protos;
+
+option java_multiple_files = true;
+option java_package = "com.zkart.protos";
+option java_outer_classname = "CustomerInfo";
+
+message Customer
+{
+	required string userName = 1;
+	optional string password = 2;
+	optional string name = 3;
+	optional string mobileNumber = 4;
+	optional int32 credit = 5;
+}
+
+
+message CustomerInfo
+{
+	repeated Customer customerInfo = 1;
+}
+
